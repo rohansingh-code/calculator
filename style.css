@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    font-family: 'Roboto', sans-serif;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 350px;
+    animation: fadeIn 0.5s;
+}
+
+.display {
+    width: 100%;
+    height: 5rem;
+    text-align: right;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #282828;
+    color: #e0e0e0;
+    box-shadow: inset 0 -3px 20px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.keys {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    border: none;
+    background-color: #424242;
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+.operation {
+    background-color: #ff8f00;
+    color: #ffffff;
+}
+
+.operation:hover {
+    background-color: #ff6f00;
+}
+
+.ans {
+    flex: 2;
+    border-radius: 25px;
+    background-color: #ff8f00;
+    color: #ffffff;
+    width: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.ans:hover {
+    background-color: #ff6f00;
+}
+
+.ac, .del {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+.ac:hover, .del:hover {
+    background-color: #c62828;
+}
+
+@media (max-width: 600px) {
+    button {
+        height: 3.5rem;
+        width: 3.5rem;
+        font-size: 1.4rem;
+    }
+
+    .display {
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+    .calc {
+        padding: 1.5rem;
+    }
+
+    .ans {
+        width: auto;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
