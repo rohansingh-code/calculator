@@ -55,7 +55,7 @@ btns.forEach(button => {
             num2 = '';
             oprt = '';
         }
-        else if (num1 && oprt && !num2) {
+        else if (num1 && oprt) {
             num2 += value;
             display.value = num1 + oprt + num2;
         }
